@@ -4,10 +4,12 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import os, sys
 if sys.version_info[0] == 2:
+ 
     from urllib import urlretrieve
     import cPickle as pickle
 
 else:
+    
     from urllib.request import urlretrieve
     import pickle
 
@@ -69,4 +71,3 @@ def load_cifar10(data_path=".",channels_last=False,test_size=0.2,random_state=13
 
     
     return X_train,y_train,X_val,y_val,X_test,y_test
-    
